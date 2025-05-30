@@ -3,8 +3,8 @@
 # 29/05/2025
 # Autor: Kauan Ferreira da Silva
 
-# Importa as tarefas do dicionário global
-from dicionario import tarefas, proximo_id
+# Bibliotecas
+from dicionario import tarefas # Importa tarefas do dicionario global
 
 # Função que exibe todas as tarefas em formato de tabela simples
 def visualizacao_simples():
