@@ -11,7 +11,7 @@ import tarefas_atualizar
 import tarefas_excluir
 
 # Dicionário
-tarefas = {} #chave: identificador (id) -> pacientes{"id" = id, "nome" = nome, "celular" = celular}
+tarefas = {} # chave: identificador (id) -> tarefas{"id" = id, "titulo" = titulo, "descrição" = descrição, "status" = status, "data" = data, "prioridade" = prioridade, "responsavel" = responsável}
 
 # Functions
 def menu():
