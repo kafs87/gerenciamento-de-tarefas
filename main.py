@@ -34,7 +34,7 @@ def options(select):
 select = None
 while select != 0:
     os.system('cls' if os.name == 'nt' else 'clear') # Limpa a tela
-    menu()
+    menu() #Exibe o menu
     try:
         select = int(input('\033[1;92m \nEscolha uma opção: \033[m'))
         options(select)
