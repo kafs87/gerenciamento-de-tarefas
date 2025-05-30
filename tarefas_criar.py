@@ -1,11 +1,11 @@
 # Gerenciamento de tarefas: Criar, visualizar e atualizar listas de tarefas ou projetos.
-# Módulo: Visualização
+# Módulo: Criação
 # 29/05/2025
 # Autor: Paulo Augusto de Jesus Vilela
 
-tarefas = {}# chave: identificador (id) -> tarefas{"id" = id, "titulo" = titulo, "descrição" = descrição, "status" = status, "data" = data, "prioridade" = prioridade, "responsavel" = responsável}
+# Bibliotecas
+from dicionario import tarefas, proximo_id
 
-proximo_id = 1
 # Função para criar uma nova tarefa
 def criar():
     global proximo_id
@@ -18,11 +18,9 @@ def criar():
     responsavel = input('Digite o responsável pela tarefa: ')
     print(f'\33[95m--- Tarefa Criada com Sucesso! ---\n id: {proximo_id}\33[m')
 
-    
-
     # Armazenar a tarefa no dicionário
-    tarefas[proximo_id] = {
-        'id': proximo_id,
+    tarefas[proximo_id[0]] = {
+        'id': proximo_id[0],
         'titulo': titulo,
         'descricao': descricao,
         'status': status,
@@ -30,4 +28,4 @@ def criar():
         'prioridade': prioridade,
         'responsavel': responsavel
     }
-    proximo_id += 1
+    proximo_id[0] += 1
