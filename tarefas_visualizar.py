@@ -16,14 +16,14 @@ def visualizacao_simples():
         return
 
     # Cabeçalho da tabela com espaçamento alinhado
-    print(f'{"ID":<4} | {"Título":<15} | {"Descrição":<20} | {"Status":<12} | {"Data":<10} | {"Prioridade":<10} | {"Responsável":<15}')
-    print('-' * 100)
+    print(f'{"ID":<4} | {"Título":<15} | {"Descrição":<40} | {"Status":<12} | {"Data":<10} | {"Prioridade":<10} | {"Responsável":<15}')
+    print('-' * 125)
 
     # Itera sobre todas as tarefas e imprime os dados formatados em colunas
     for id, tarefa in tarefas.items():
         print(f'{tarefa["id"]:<4} | '
               f'{tarefa["titulo"]:<15} | '
-              f'{tarefa["descricao"]:<20} | '
+              f'{tarefa["descricao"]:<40} | '
               f'{tarefa["status"]:<12} | '
               f'{tarefa["data"]:<10} | '
               f'{tarefa["prioridade"]:<10} | '
@@ -54,7 +54,7 @@ def visualizacao_avancada():
     # Se o usuário deseja aplicar filtro
     if aplicar_filtro in ['s', 'sim']:
         print('\nFiltrar por:')
-        print('| 1 - ID | 2 - Título | 3 - Descrição | 4 - Status | 5 - Data | 6 - Prioridade | 7 - Responsável |')
+        print(f'1 - {"ID":<4} | 2 - {"Título":<15} | 3 - {"Descrição":<40} | 4 - {"Status":<12} | 5 - {"Data":<10} | 6 - {"Prioridade":<10} | 7 - {"Responsável":<15}')
 
         try:
             # Recebe o campo e o valor que será usado para filtrar as tarefas
@@ -81,7 +81,7 @@ def visualizacao_avancada():
             return
 
     # Pergunta ao usuário quais campos ele quer visualizar
-    print('\n| 1 - ID | 2 - Título | 3 - Descrição | 4 - Status | 5 - Data | 6 - Prioridade | 7 - Responsável |')
+    print(f'1 - {"ID":<4} | 2 - {"Título":<15} | 3 - {"Descrição":<40} | 4 - {"Status":<12} | 5 - {"Data":<10} | 6 - {"Prioridade":<10} | 7 - {"Responsável":<15}')
     entrada = input('Quais campos você quer visualizar? (ex: 2, 3, 6): ').strip()
 
     try:
@@ -97,7 +97,7 @@ def visualizacao_avancada():
         4: 'status', 5: 'data', 6: 'prioridade', 7: 'responsavel'
     }
 
-    print('\n--- Tarefas ---')
+    print('\n---------- Tarefas ----------')
 
     # Percorre todas as tarefas
     for tarefa in tarefas.values():
@@ -109,4 +109,4 @@ def visualizacao_avancada():
         for i in escolhas:
             if i in campos:
                 print(f"{campos[i].capitalize()}: {tarefa[campos[i]]}")
-        print('---------------')
+        print('-----------------------------')
