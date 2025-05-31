@@ -4,8 +4,8 @@
 # Autor: Paulo Vilela, Kauan Ferreira, Franscisco Carlos e Vinícius Henrique
 
 # Bibliotecas
+from dicionario import tarefas, proximo_id # Importa tarefas e ID do dicionario global
 import os
-from dicionario import tarefas, proximo_id
 import tarefas_criar
 import tarefas_visualizar
 import tarefas_atualizar
