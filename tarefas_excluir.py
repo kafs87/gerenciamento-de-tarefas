@@ -4,7 +4,7 @@
 # Autor: Vinicius Henrique Silva Bomfim
 
 # Bibliotecas
-from dicionario import tarefas, proximo_id
+from dicionario import tarefas, proximo_id # Importa tarefas do dicionario global
 
 def excluir():
     print('\n--- Exclusão de Tarefas ---\n')
